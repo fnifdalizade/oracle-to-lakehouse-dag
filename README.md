@@ -4,13 +4,13 @@ This project demonstrates a production-style ETL pipeline built with **Apache Ai
 
 ---
 
-## 🧠 Overview
+## Overview
 
 The DAG connects to an Oracle source, runs a business aggregation query, cleans up the dataset, and loads it into a Lakehouse table. It overwrites the existing data safely using batched inserts, commits per batch, and rollback on error. All credentials and tokens are stored securely in **Airflow Connections** or environment variables.
 
 ---
 
-## ⚙️ Key Features
+## Key Features
 
 * **Automated 2-hour schedule** (`0 7-21/2 * * *`)
 * **Oracle → Lakehouse ETL** with `cx_Oracle` and `pyhive`
@@ -22,7 +22,7 @@ The DAG connects to an Oracle source, runs a business aggregation query, cleans 
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 dags/
@@ -31,7 +31,7 @@ dags/
 
 ---
 
-## 🔑 Airflow Connections
+## Airflow Connections
 
 | Conn ID         | Purpose                       | Required Fields                                          |
 | --------------- | ----------------------------- | -------------------------------------------------------- |
@@ -41,7 +41,7 @@ dags/
 
 ---
 
-## 🔔 Notifications
+## Notifications
 
 * On **task failure**, a message is sent to a Telegram chat:
 
